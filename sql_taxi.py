@@ -94,5 +94,4 @@ if __name__ == '__main__':
           'running the pipeline.'))
   known_args, pipeline_args = parser.parse_known_args()
 
-  run(known_args.output_topic, pipeline_args)
-#.waitUntilFinish(Duration.standardMinutes(2));
+  run(known_args.output_topic, pipeline_args).waitUntilFinish(Duration.standardMinutes(2));
