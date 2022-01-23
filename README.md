@@ -21,7 +21,7 @@ Information about the known issues when running an Apache Beam job that uses SQL
  ![table schema](https://github.com/biggymuticha/Comp548DL-Final-Project/blob/main/table_schema.png)
 
 3. Create a bucket and folder inside the bucket called _temp_
-4. Create a Dataflow job using the Cloud Shell console, replacing the text in <> with specific names that suit your environment. You can also change number of workers that should start running the job and the maximum number of workers that can be used to run the job when the need arises during the job execution. Changing these options will help appreciating the autoscaling capabilities of Google's managed cloud platform and services.
+4. Create a Dataflow job using the Cloud Shell console, replacing the text in <> with specific names that suit your environment. You can also change number of workers that should start running the job and the maximum number of workers that can be used to run the job when the need arises during the job execution. Changing these options will help one to appreciate the autoscaling capabilities of Google's managed cloud platform and services.
 
  _gcloud dataflow jobs run <job_name> --gcs-location gs://dataflow-templates-us-central1/latest/PubSub_to_BigQuery --region <region_name> --max-workers 10 --num-workers 1  --staging-location <bucket_name>/temp --parameters inputTopic=projects/pubsub-public-data/topics/taxirides-realtime,outputTableSpec=<project_name>:<dataset_name>.<bigquery_table_name>_
   <br/><br/>
@@ -30,4 +30,10 @@ Information about the known issues when running an Apache Beam job that uses SQL
   ![rides graph](https://github.com/biggymuticha/Comp548DL-Final-Project/blob/main/rides_graph.png)
   
 
-
+## References
+- https://issues.apache.org/jira/browse/BEAM-12501 
+- https://lists.apache.org/thread/4yqxt2m8qd4x8o7vmzd6gth9t7dg7vkp
+- https://github.com/apache/beam/tree/master/sdks/python/apache_beam/examples
+- https://cloud.google.com/dataflow/docs/concepts/beam-programming-mode
+- https://en.wikipedia.org/wiki/BigQuery
+- https://www.coursera.org/learn/gcp-big-data-ml-fundamentals
