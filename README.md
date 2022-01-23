@@ -18,11 +18,16 @@ Information about the known issues when running an Apache Beam job that uses SQL
 - Cloud Pub/Sub API
 
 2. Create a BigQuery table with the following schema
- ![table schema](https://github.com/biggymuticha/Comp548DL-Final-Project/blob/main/table_schema.PNG)
+ ![table schema](https://github.com/biggymuticha/Comp548DL-Final-Project/blob/main/table_schema.png)
 
 3. Create a bucket and folder inside the bucket called _temp_
 4. Create a Dataflow job using the Cloud Shell console, replacing the text in <> with specific names that suit your environment
 
-  _gcloud dataflow jobs run <job_name> --gcs-location gs://dataflow-templates-us-central1/latest/PubSub_to_BigQuery --region <region_name> --staging-location <bucket_name>/temp --parameters inputTopic=projects/pubsub-public-data/topics/taxirides-realtime,outputTableSpec=<project_name>:<dataset_name>.<bigquery_table_name>_
-6. 
+ _gcloud dataflow jobs run <job_name> --gcs-location gs://dataflow-templates-us-central1/latest/PubSub_to_BigQuery --region <region_name> --staging-location <bucket_name>/temp --parameters inputTopic=projects/pubsub-public-data/topics/taxirides-realtime,outputTableSpec=<project_name>:<dataset_name>.<bigquery_table_name>_
+  <br/><br/>
+5. Write aggregation queries against the BigQuery table and visualize the results using Google Studio
+  
+  ![rides graph](https://github.com/biggymuticha/Comp548DL-Final-Project/blob/main/rides_graph.png)
+  
+
 
