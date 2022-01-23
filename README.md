@@ -18,4 +18,7 @@ Information about the known issues when running an Apache Beam job that uses SQL
 - Cloud Pub/Sub API
 
 2. Create a BigQuery table with the following schema
-![table_schema.png]
+ ![table schema](https://github.com/biggymuticha/Comp548DL-Final-Project/blob/main/table_schema.PNG)
+
+3. Create a bucket and folder inside the bucket called _temp_
+4. 
