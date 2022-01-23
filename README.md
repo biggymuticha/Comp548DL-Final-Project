@@ -6,7 +6,7 @@ The final project for the Big Data Management and Processing course was meant to
 The sql_taxi.py code is taken from the Apache Beam example codes found here.
 - https://github.com/apache/beam/tree/master/sdks/python/apache_beam/examples
 
-Information about the known issues when running an Apache Beam job that uses SQLTransform on Windows 10 computer is found here.
+Information about the known issues when running an Apache Beam job that uses SQLTransform on Windows 10 computer is found on below links.
 - https://issues.apache.org/jira/browse/BEAM-12501 
 - https://lists.apache.org/thread/4yqxt2m8qd4x8o7vmzd6gth9t7dg7vkp
 
@@ -21,4 +21,8 @@ Information about the known issues when running an Apache Beam job that uses SQL
  ![table schema](https://github.com/biggymuticha/Comp548DL-Final-Project/blob/main/table_schema.PNG)
 
 3. Create a bucket and folder inside the bucket called _temp_
-4. 
+4. Create a Dataflow job using the Cloud Shell console, replacing the text in <> with specific names that suit your environment
+
+  _gcloud dataflow jobs run <job_name> --gcs-location gs://dataflow-templates-us-central1/latest/PubSub_to_BigQuery --region <region_name> --staging-location <bucket_name>/temp --parameters inputTopic=projects/pubsub-public-data/topics/taxirides-realtime,outputTableSpec=<project_name>:<dataset_name>.<bigquery_table_name>_
+6. 
+
